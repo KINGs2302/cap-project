@@ -9,7 +9,7 @@ function Reportstatus() {
     const fetchReports = async () => {
         const token = localStorage.getItem("token");
       try {
-        const response = await fetch("http://localhost:5000/api/reports/my-reports", {
+        const response = await fetch("https://cap-backend-6vpq.onrender.com/api/reports/my-reports", {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -31,7 +31,7 @@ function Reportstatus() {
   const deleteReport = async (id) => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`http://localhost:5000/api/reports/${id}`, {
+      const response = await fetch(`https://cap-backend-6vpq.onrender.com/api/reports/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

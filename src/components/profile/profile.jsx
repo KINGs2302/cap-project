@@ -21,7 +21,7 @@ const Profile = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:5000/api/auth/profile", {
+        const response = await fetch("https://cap-backend-6vpq.onrender.com/api/auth/profile", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ const Profile = () => {
         formData.append("name", updatedProfile.name);
         formData.append("address", updatedProfile.address);
 
-        const response = await fetch("http://localhost:5000/api/auth/update-profile", {
+        const response = await fetch("https://cap-backend-6vpq.onrender.com/auth/update-profile", {
           method: "PUT",
           headers: {
             Authorization: `Bearer ${token}`,

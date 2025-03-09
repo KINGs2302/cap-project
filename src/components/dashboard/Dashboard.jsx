@@ -23,7 +23,7 @@ export function Dashboard() {
 
       try {
         const response = await fetch(
-          "http://localhost:5000/api/auth/check-token",
+          "https://cap-backend-6vpq.onrender.com/api/auth/check-token",
           {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
@@ -46,7 +46,7 @@ export function Dashboard() {
       const token = localStorage.getItem("token");
       try {
         const response = await fetch(
-          "http://localhost:5000/api/auth/users/guests",
+          "https://cap-backend-6vpq.onrender.com/api/auth/users/guests",
           {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
@@ -112,7 +112,7 @@ export function Dashboard() {
     const token = localStorage.getItem("token"); // ✅ Get the token
 
     try {
-      const response = await fetch("http://localhost:5000/api/reports", {
+      const response = await fetch("https://cap-backend-6vpq.onrender.com/api/reports", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`, // ✅ Ensure token is included

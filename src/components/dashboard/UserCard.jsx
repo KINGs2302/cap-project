@@ -9,7 +9,7 @@ const UserCard = ({ user, openReportModal }) => {
     const fetchReportedGuests = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:5000/api/reports/approved-reports", {
+        const response = await fetch("https://cap-backend-6vpq.onrender.com/api/reports/approved-reports", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

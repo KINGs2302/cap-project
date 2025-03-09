@@ -9,7 +9,7 @@ function Approve() {
     const token = localStorage.getItem("token");
     const fetchReports = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/reports", {
+        const response = await fetch("https://cap-backend-6vpq.onrender.com/api/reports", {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -31,7 +31,7 @@ function Approve() {
   const updateReportStatus = async (id, status) => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`http://localhost:5000/api/reports/update/${id}`, {
+      const response = await fetch(`https://cap-backend-6vpq.onrender.com/api/reports/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
